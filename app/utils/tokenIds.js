@@ -1,5 +1,6 @@
 // FT whitelist. Request listing: hello@panmoni.com.
 const tokenIds = [
+  "4046913cba6b70b2214a048a3df92252849f481ffa1455ed7faf17243c36bf67",
   "cc805fb1a702fe4c326fb83d06250005a51623e65fd4449c34d8ae207afdc08b",
   "5438105b673cbc062326daaa71d91889d3b1754386132d5bd9c9cd212fea536f",
   "de980d12e49999f1dbc8d61a8f119328f7be9fb1c308eafe979bf10abb17200d",
