@@ -25,3 +25,12 @@ button {
 button:hover {
   @apply transform scale-105;
 }
+
+/* Styles for the dark mode button */
+.theme-switcher-button {
+  @apply fixed bottom-4 right-4 p-2 bg-primary text-white rounded-full shadow-lg hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-primary;
+}
+
+.dark .theme-switcher-button {
+  @apply bg-indigo-800 hover:bg-indigo-600 focus:ring-indigo-500;
+}
