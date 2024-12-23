@@ -163,9 +163,7 @@ export default function Page() {
         </li>
       </ul>
       <h3 className="text-2xl my-4">Contact</h3>
-      <p>
-        Please email <a href="mailto:hello@panmoni.com">hello@panmoni.com</a>{" "}
-        and we&apos;ll be thrilled to assist you.
+      <p
       </p>
     </main>
   );
