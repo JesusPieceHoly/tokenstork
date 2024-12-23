@@ -19,6 +19,7 @@ export default async function handler(
           "https://tokenstork.com",
           "http://localhost:3000",
           "http://localhost:5173",
+          "https://gql.chaingraph.panmoni.com/v1/graphql",
           "https://drop.tokenstork.com",
         ];
 
