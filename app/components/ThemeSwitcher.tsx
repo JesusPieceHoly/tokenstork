@@ -1,11 +1,14 @@
 "use client";
 
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+// TODO: update to use Tremor and make sure it works, then include in header, maybe as sun/moon
+
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
+import { Button } from "@tremor/react";
 
 export default function ThemeSwitcher() {
-  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -14,11 +17,13 @@ export default function ThemeSwitcher() {
   if (!mounted) return null;
 
   return (
-    <button
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="theme-switcher-button"
-    >
-      {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
-    </button>
+    <div className="flex gap-4">
+      <Button size="sm" variant="primary" onClick={() => setTheme("light")}>
+        Light
+      </Button>
+      <Button size="sm" variant="primary" onClick={() => setTheme("dark")}>
+        Dark
+      </Button>
+    </div>
   );
 }
