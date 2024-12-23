@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import HelloBar from "@/app/components/HelloBar";
 import Footer from "@/app/components/Footer";
