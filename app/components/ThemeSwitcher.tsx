@@ -11,6 +11,9 @@ const ThemeSwitcher: React.FC = () => {
 
   useEffect(() => {
     setMounted(true);
+  }, []);
+
+  useEffect(() => {
     console.log(`Current theme: ${theme}`);
   }, [theme]);
 
