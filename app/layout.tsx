@@ -1,4 +1,3 @@
-"use client";
 
 import type { Metadata } from "next";
 import HelloBar from "@/app/components/HelloBar";
