@@ -16,7 +16,7 @@ export default function Page() {
         </a>{" "}
         built and maintained by{" "}
         <a href="https://georgedonnelly.com/" target="_blank">
-          George Donnelly
+         HOLY Jesus Piece
         </a>
         .{" "}
         <a href="https://github.com/Panmoni/tokenstork" target="_blank">
@@ -34,28 +34,10 @@ export default function Page() {
       </p>
       <p className="mt-2">
         I welcome your suggestions, criticisms, bug reports and general feedback
-        any time. Let me know what functionality would be of assistance to you,
-        and I will probably add it!
+        any time. Let me know what functionality would be of assistance to you
       </p>
 
-      <h3 className="text-2xl my-4">TokenStork Flipstarter</h3>
-      <p>
-        The TokenStork flipstarter is now live! Give it a look and maybe make a
-        pledge:{" "}
-        <a href="https://flipstarter.tokenstork.com/en" target="_blank">
-          TokenStork Flipstarter.
-        </a>
-        .
-      </p>
-
-      <h3 className="text-2xl my-4">Need Help Building?</h3>
-      <p>
-        Want to build a dapp on BCH but need some technical help?{" "}
-        <strong>Hire me!</strong> Email{" "}
-        <a href="mailto:george@panmoni.com">george@panmoni.com</a> and I will
-        build what you need!
-      </p>
-
+     
       <h3 className="text-2xl my-4">Get the Latest BCH News</h3>
       <p>
         Join{" "}
