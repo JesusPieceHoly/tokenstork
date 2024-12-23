@@ -15,16 +15,6 @@ h3 {
   @apply text-2xl font-bold;
 }
 
-/* Define custom classes within a @layer directive to ensure TailwindCSS recognizes them */
-@layer utilities {
-  .bg-gray-800 {
-    @apply bg-gray-800;
-  }
-  .text-blue-200 {
-    @apply text-blue-200;
-  }
-}
-
 /* Dark mode styles */
 .dark body {
   @apply bg-gray-900 text-white;
@@ -32,7 +22,8 @@ h3 {
 
 /* Modern theme styles */
 .modern body {
-  @apply bg-gray-800 text-blue-200;
+  background-color: #282c34; /* Replace with your desired background color for modern theme */
+  color: #61dafb; /* Replace with your desired text color for modern theme */
 }
 
 .light body {
