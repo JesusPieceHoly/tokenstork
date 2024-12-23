@@ -20,7 +20,7 @@ const ThemeSwitcher: React.FC = () => {
   if (!mounted) return null;
 
   return (
-    <div className="flex gap-4">
+    <div className="fixed bottom-4 right-4 p-3 bg-primary text-white rounded-full shadow-lg cursor-pointer flex gap-4">
       <Button size="sm" variant="primary" onClick={() => { setTheme("light"); console.log("Switched to light theme"); }}>
         Light
       </Button>
