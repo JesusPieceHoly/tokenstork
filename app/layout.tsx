@@ -3,10 +3,11 @@ import HelloBar from "@/app/components/HelloBar";
 import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Header";
 import CTA from "@/app/components/CTA";
-import GoogleAnalytics from "./components/GoogleAnalytics";
-import { BCHPriceProvider } from "./providers/bchpriceclientprovider";
+import GoogleAnalytics from "@/app/components/GoogleAnalytics";
+import ThemeSwitcher from "@/app/components/ThemeSwitcher"; // Import ThemeSwitcher
+import { BCHPriceProvider } from "@/app/providers/bchpriceclientprovider";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "@/app/globals.css"; // Ensure correct path to globals.css
 
 const bodyFont = Inter({
   subsets: ["latin"],
@@ -77,6 +78,7 @@ export default function RootLayout({
           <CTA />
           <Footer />
           <GoogleAnalytics />
+          <ThemeSwitcher /> {/* Add ThemeSwitcher as a floating button */}
         </body>
       </html>
     </BCHPriceProvider>
