@@ -7,7 +7,7 @@ import CTA from "@/app/components/CTA";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import { BCHPriceProvider } from "./providers/bchpriceclientprovider";
 import { Inter } from "next/font/google";
-import "./app/globals.css";
+import "./globals.css";
 
 const bodyFont = Inter({
   subsets: ["latin"],
