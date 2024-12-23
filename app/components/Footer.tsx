@@ -114,7 +114,7 @@ const Footer = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://t.me/Panmoni/487"
+            href="https://t.me/CashTokensBitcoinCash"
             className="text-gray-400 hover:text-accent"
           >
             <span className="sr-only">Telegram</span>
