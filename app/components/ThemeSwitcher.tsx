@@ -24,9 +24,6 @@ export default function ThemeSwitcher() {
       <Button size="sm" variant="primary" onClick={() => setTheme("dark")}>
         Dark
       </Button>
-      <Button size="sm" variant="primary" onClick={() => setTheme("modern")}>
-        Modern
-      </Button>
     </div>
   );
 }
