@@ -2,10 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Light mode styles (default) */
+body {
+  @apply bg-white text-black;
+}
+
 a {
   @apply underline text-textcolor hover:text-accent visited:text-textcolor active:text-linkactive;
 }
 
 h3 {
   @apply text-2xl font-bold;
+}
+
+/* Dark mode styles */
+.dark body {
+  @apply bg-gray-900 text-white;
+}
+
+/* Modern theme styles */
+.modern body {
+  @apply bg-gray-800 text-blue-200;
+}
+
+.light body {
+  @apply bg-white text-black;
+}
+
+button {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+button:hover {
+  @apply transform scale-105;
 }
