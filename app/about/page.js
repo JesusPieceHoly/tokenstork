@@ -163,7 +163,7 @@ export default function Page() {
         </li>
       </ul>
       <h3 className="text-2xl my-4">Contact</h3>
-      <p
+      <p>
       </p>
     </main>
   );
