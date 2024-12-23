@@ -11,19 +11,20 @@ const ThemeSwitcher: React.FC = () => {
 
   useEffect(() => {
     setMounted(true);
-  }, []);
+    console.log(`Current theme: ${theme}`);
+  }, [theme]);
 
   if (!mounted) return null;
 
   return (
     <div className="flex gap-4">
-      <Button size="sm" variant="primary" onClick={() => setTheme("light")}>
+      <Button size="sm" variant="primary" onClick={() => { setTheme("light"); console.log("Switched to light theme"); }}>
         Light
       </Button>
-      <Button size="sm" variant="primary" onClick={() => setTheme("dark")}>
+      <Button size="sm" variant="primary" onClick={() => { setTheme("dark"); console.log("Switched to dark theme"); }}>
         Dark
       </Button>
-      <Button size="sm" variant="primary" onClick={() => setTheme("modern")}>
+      <Button size="sm" variant="primary" onClick={() => { setTheme("modern"); console.log("Switched to modern theme"); }}>
         Modern
       </Button>
     </div>
