@@ -4,7 +4,6 @@ import { Fragment } from "react";
 import { usePathname } from "next/navigation";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import Image from "next/image";
-import ThemeSwitcher from "./ThemeSwitcher";
 
 // TODO: should this have the header tag?
 
@@ -22,7 +21,6 @@ function classNames(...classes: string[]) {
 export default function Navbar({}: {}) {
   const pathname = usePathname();
 
-  export default function Header() { return ( <header className="p-4 bg-gray-800 text-white"> <h1 className="text-xl">My Website</h1> <ThemeSwitcher /> </header> ); 
                                     
   return (
     <Disclosure as="nav" className="bg-primary/10 shadow-sm rounded-lg px-2">
