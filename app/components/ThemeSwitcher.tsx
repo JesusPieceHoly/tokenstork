@@ -1,12 +1,11 @@
+// components/ThemeSwitcher.tsx
 "use client";
-
-// TODO: update to use Tremor and make sure it works, then include in header, maybe as sun/moon
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Button } from "@tremor/react";
 
-export default function ThemeSwitcher() {
+const ThemeSwitcher: React.FC = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -29,4 +28,6 @@ export default function ThemeSwitcher() {
       </Button>
     </div>
   );
-}
+};
+
+export default ThemeSwitcher;
