@@ -78,7 +78,7 @@ export default function Page() {
         by donating to the following address. Thank you!
       </p>
       <p className="text-lg font-mono">
-        bitcoincash:qz3pxmwda8gd42wa8k9yfxcwhcaapeuhygjc8mc4m8
+        bitcoincash:zpehc87pfpy3lhqtt92e2c6yaapnhhl565fg8s3kql
       </p>
 
       <h3 className="text-2xl my-4">Acknowledgments</h3>
