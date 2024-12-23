@@ -1,10 +1,9 @@
-
 import type { Config } from "tailwindcss";
 
 const colors = require("tailwindcss/colors");
 
 // TODO: verify responsiveness of the site
-// TODO: create themes for dogecash andxrbf https://tailwindcss.com/docs/theme, https://tailwindcss.com/docs/configuration
+// TODO: create themes for dogecash and xrbf https://tailwindcss.com/docs/theme, https://tailwindcss.com/docs/configuration
 // TODO: maybe just implement sun and moon for now https://github.com/HamedBahram/next-starter-with-theme/blob/main/app/components/ThemeButton.jsx
 // TODO: fix warning about safelist patterns. https://tailwindcss.com/docs/content-configuration#safelisting-classes
 // TODO: under container, consider re-adding and/or adjusting this.
@@ -13,10 +12,11 @@ const colors = require("tailwindcss/colors");
 //   md: "1.5rem",
 //   lg: "2rem",
 //   xl: "4rem",
-// },
+// }
 // TODO: is Tremor changing the font for the token table??
 
 const config: Config = {
+  darkMode: 'class', // Enable dark mode using the 'class' strategy
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
