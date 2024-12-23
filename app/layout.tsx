@@ -1,23 +1,35 @@
-import type { Metadata } from "next";
+
+import type { Metadata, Viewport } from "next";
 import HelloBar from "@/app/components/HelloBar";
 import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Header";
 import CTA from "@/app/components/CTA";
-import GoogleAnalytics from "@/app/components/GoogleAnalytics";
-import ThemeSwitcher from "@/app/components/ThemeSwitcher"; // Import ThemeSwitcher
-import { BCHPriceProvider } from "@/app/providers/bchpriceclientprovider";
+import GoogleAnalytics from "./components/GoogleAnalytics";
+import { BCHPriceProvider } from "./providers/bchpriceclientprovider";
 import { Inter } from "next/font/google";
-import { ThemeProvider } from 'next-themes';
-import "@/app/globals.css"; // Ensure correct path to globals.css
+import "./globals.css";
 
 const bodyFont = Inter({
   subsets: ["latin"],
   variable: "--body-font",
 });
 
+// TODO: add inner pages https://www.tremor.so/docs/components/tracker, https://storybook.tremor.so/?path=/docs/components-list-table--docs
+// TODO: add gradient bg https://kopi.dev/tailwind/gradient-background-animation/ (also has some spacing stuff), https://tailwindcomponents.com/component/button-background-hover-animation
+// TODO: work more on different screen sizes/breakpoints
+// TODO: add custom 404 page is this the doge you were looking for?
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: "#4f359b",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://tokenstork.com"),
-  title: "Token Stork: Discover, Track and Analyze BCH Cash Tokens (0.0.1 beta)",
+  title:
+    "Token Stork: Discover, Track and Analyze BCH Cash Tokens (0.0.1 beta)",
   description: "Track BCH CashTokens market cap and more with TokenStork.",
   icons: {
     icon: "favicon-32x32.png",
@@ -29,7 +41,8 @@ export const metadata: Metadata = {
   },
   manifest: "site.webmanifest",
   openGraph: {
-    title: "Token Stork: Discover, Track and Analyze BCH Cash Tokens (0.0.1 beta)",
+    title:
+      "Token Stork: Discover, Track and Analyze BCH Cash Tokens (0.0.1 beta)",
     siteName: "Token Stork",
     description: "Track BCH CashTokens market cap and more with TokenStork.",
     url: "https://tokenstork.com/",
@@ -63,27 +76,24 @@ export default function RootLayout({
   tokenId?: string;
 }) {
   return (
-    <ThemeProvider attribute="class">
-      <BCHPriceProvider>
-        <html lang="en" className={`${bodyFont.variable} font-sans antialiased dark:bg-gray-950`}>
-          <head>
-            <script
-              src="https://beamanalytics.b-cdn.net/beam.min.js"
-              data-token="c989accf-6494-49a8-ad3a-ee34c91aeedd"
-              async
-            ></script>
-          </head>
-          <body className="container mx-auto">
-            <HelloBar />
-            <Navbar />
-            {children}
-            <CTA />
-            <Footer />
-            <GoogleAnalytics />
-            <ThemeSwitcher /> {/* Add ThemeSwitcher as a floating button */}
-          </body>
-        </html>
-      </BCHPriceProvider>
-    </ThemeProvider>
+    <BCHPriceProvider>
+      <html lang="en" className={`${bodyFont.variable} font-sans`}>
+        <head>
+          <script
+            src="https://beamanalytics.b-cdn.net/beam.min.js"
+            data-token="c989accf-6494-49a8-ad3a-ee34c91aeedd"
+            async
+          ></script>
+        </head>
+        <body className="container mx-auto">
+          <HelloBar />
+          <Navbar />
+          {children}
+          <CTA />
+          <Footer />
+          <GoogleAnalytics />
+        </body>
+      </html>
+    </BCHPriceProvider>
   );
 }
