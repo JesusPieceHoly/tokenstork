@@ -4,7 +4,7 @@ import { Fragment } from "react";
 import { usePathname } from "next/navigation";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import Image from "next/image";
-import ThemeSwitcher from './ThemeSwitcher'; // Importing ThemeSwitcher
+import ThemeSwitcher from './ThemeSwitcher';
 
 const navigation = [
   { name: "Tokens", href: "/" },
@@ -60,8 +60,7 @@ export default function Navbar({}: {}) {
                 </div>
               </div>
               <div className="hidden sm:ml-6 sm:flex sm:items-center">
-                {/* Adding ThemeSwitcher component here */}
-                <ThemeSwitcher />
+                <ThemeSwitcher /> {/* Adding ThemeSwitcher here */}
                 <Menu as="div" className="relative ml-3">
                   <div></div>
                   <Transition
