@@ -1,3 +1,4 @@
+
 import type { Metadata, Viewport } from "next";
 import HelloBar from "@/app/components/HelloBar";
 import Footer from "@/app/components/Footer";
@@ -6,7 +7,6 @@ import CTA from "@/app/components/CTA";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import { BCHPriceProvider } from "./providers/bchpriceclientprovider";
 import { Inter } from "next/font/google";
-import { ThemeProvider } from 'next-themes'; // Import ThemeProvider
 import "./globals.css";
 
 const bodyFont = Inter({
@@ -76,26 +76,24 @@ export default function RootLayout({
   tokenId?: string;
 }) {
   return (
-    <ThemeProvider attribute="class"> {/* Add ThemeProvider here */}
-      <BCHPriceProvider>
-        <html lang="en" className={`${bodyFont.variable} font-sans`}>
-          <head>
-            <script
-              src="https://beamanalytics.b-cdn.net/beam.min.js"
-              data-token="c989accf-6494-49a8-ad3a-ee34c91aeedd"
-              async
-            ></script>
-          </head>
-          <body className="container mx-auto">
-            <HelloBar />
-            <Navbar />
-            {children}
-            <CTA />
-            <Footer />
-            <GoogleAnalytics />
-          </body>
-        </html>
-      </BCHPriceProvider>
-    </ThemeProvider>
+    <BCHPriceProvider>
+      <html lang="en" className={`${bodyFont.variable} font-sans`}>
+        <head>
+          <script
+            src="https://beamanalytics.b-cdn.net/beam.min.js"
+            data-token="c989accf-6494-49a8-ad3a-ee34c91aeedd"
+            async
+          ></script>
+        </head>
+        <body className="container mx-auto">
+          <HelloBar />
+          <Navbar />
+          {children}
+          <CTA />
+          <Footer />
+          <GoogleAnalytics />
+        </body>
+      </html>
+    </BCHPriceProvider>
   );
 }
