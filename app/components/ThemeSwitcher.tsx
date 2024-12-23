@@ -1,37 +1,24 @@
-// components/ThemeSwitcher.tsx
 "use client";
 
-import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
-import { Button } from "@tremor/react";
+import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 
-const ThemeSwitcher: React.FC = () => {
-  const [mounted, setMounted] = useState(false);
+export default function ThemeSwitcher() {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  useEffect(() => {
-    console.log(`Current theme: ${theme}`);
-  }, [theme]);
-
   if (!mounted) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 p-3 bg-primary text-white rounded-full shadow-lg cursor-pointer flex gap-4">
-      <Button size="sm" variant="primary" onClick={() => { setTheme("light"); console.log("Switched to light theme"); }}>
-        Light
-      </Button>
-      <Button size="sm" variant="primary" onClick={() => { setTheme("dark"); console.log("Switched to dark theme"); }}>
-        Dark
-      </Button>
-      <Button size="sm" variant="primary" onClick={() => { setTheme("modern"); console.log("Switched to modern theme"); }}>
-        Modern
-      </Button>
-    </div>
+    <button
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      className="p-2 bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
+    >
+      {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+    </button>
   );
-};
-
-export default ThemeSwitcher;
+}
