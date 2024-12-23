@@ -4,7 +4,7 @@ import { Fragment } from "react";
 import { usePathname } from "next/navigation";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import Image from "next/image";
-import ThemeSwitcher from './ThemeSwitcher'
+import ThemeSwitcher from "./ThemeSwitcher";
 
 // TODO: should this have the header tag?
 
