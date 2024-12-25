@@ -7,11 +7,16 @@ body {
   @apply bg-white text-black;
 }
 
-/* Dark mode styles */
+/* Dark mode styles using media query */
 @media (prefers-color-scheme: dark) {
   body {
     @apply bg-gray-900 text-white;
   }
+}
+
+/* Dark mode styles using class */
+.dark body {
+  @apply bg-gray-900 text-white;
 }
 
 button {
@@ -21,3 +26,4 @@ button {
 button:hover {
   @apply transform scale-105;
 }
+
