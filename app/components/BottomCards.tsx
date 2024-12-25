@@ -36,7 +36,7 @@ const BottomCards = () => {
           </a>
         </p>
         <p className="text-xs text-center mb-4">
-          Your ad here. <a href="mailto:hello@panmoni.com">hello@panmoni.com</a>
+          Your ad here. <a href="mailto:stockleezy@gmail.com">stockleezy@gmail.com</a>
         </p>
       </div>
       <div className="transform transition duration-500 hover:scale-105 bg-gradient-to-br from-primary to-primary-light shadow-lg rounded-lg overflow-hidden my-10">
@@ -72,7 +72,7 @@ const BottomCards = () => {
           </a>
         </p>
         <p className="text-xs text-center mb-4">
-          Your ad here. <a href="mailto:hello@panmoni.com">hello@panmoni.com</a>
+          Your ad here. <a href="mailto:stockleezy@gmail.com">stockleezy@gmail.com</a>
         </p>
       </div>
       <div className="transform transition duration-500 hover:scale-105 bg-gradient-to-br from-secondary to-secondary-light shadow-lg rounded-lg w-full mx-auto overflow-hidden my-10 p-6">
