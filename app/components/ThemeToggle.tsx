@@ -4,19 +4,22 @@ import { useEffect, useState } from 'react';
 
 const ThemeToggle: React.FC = () => {
   const [theme, setTheme] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme');
     if (storedTheme) {
       setTheme(storedTheme);
       document.documentElement.classList.add(storedTheme);
+      console.log(`Stored theme found: ${storedTheme}`);
     } else {
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       const initialTheme = prefersDark ? 'dark' : 'light';
       setTheme(initialTheme);
       document.documentElement.classList.add(initialTheme);
+      console.log(`No stored theme. System prefers dark: ${prefersDark}. Initial theme set to: ${initialTheme}`);
     }
-    console.log(`Initial theme: ${theme}`);
+    setMounted(true); // Ensure the component is mounted before rendering
   }, []);
 
   const toggleTheme = () => {
@@ -27,6 +30,9 @@ const ThemeToggle: React.FC = () => {
     document.documentElement.classList.add(newTheme);
     console.log(`Switched to ${newTheme} theme`);
   };
+
+  // Hide the button if theme is 'dark' or not yet mounted
+  if (!mounted || theme === 'dark') return null;
 
   return (
     <button onClick={toggleTheme} className="fixed bottom-4 right-4 p-3 bg-primary text-white rounded-full shadow-lg cursor-pointer">
