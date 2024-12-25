@@ -11,7 +11,7 @@ const Footer = () => {
 
           <div className="px-5 py-2">
             <a
-              href="mailto:hello@panmoni.com"
+              href="stockleezy@gmail.com"
               className="text-base leading-6 text-gray-500 hover:text-gray-900 no-underline"
             >
               Contact
@@ -94,7 +94,7 @@ const Footer = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/Panmoni/tokenstork"
+            href="https://github.com/JesusPieceHoly/tokenstork"
             className="text-gray-400 hover:text-accent"
           >
             <span className="sr-only">GitHub</span>
@@ -192,10 +192,10 @@ const Footer = () => {
         <p className="mt-2 text-base leading-6 text-center text-gray-400">
           A&nbsp;
           <a
-            href="https://www.panmoni.com/"
+            href="https://t.me/HOLYJesusPiece"
             target="_blank"
             rel="noopener noreferrer"
-            title="Panmoni is a Web3 product studio"
+            title="Originally produced by Panmoni , continued by Jesus Piece Labs "
             className="unset gradient-link tracking-wider font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#00abda] to-[#1476ff] hover:after:bg-gradient-to-r hover:after:from-[#00abda] hover:after:to-[#1476ff] astro-C44LKZXB"
           >
             Panmoni
