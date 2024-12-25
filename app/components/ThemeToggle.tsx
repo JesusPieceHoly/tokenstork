@@ -16,6 +16,7 @@ const ThemeToggle: React.FC = () => {
       setTheme(initialTheme);
       document.documentElement.classList.add(initialTheme);
     }
+    console.log(`Initial theme: ${theme}`);
   }, []);
 
   const toggleTheme = () => {
