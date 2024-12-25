@@ -4,7 +4,8 @@ import { Fragment } from "react";
 import { usePathname } from "next/navigation";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import Image from "next/image";
-import ThemeSwitcher from "@/app/components/ThemeSwitcher"; // Import ThemeSwitcher
+
+// TODO: should this have the header tag?
 
 const navigation = [
   { name: "Tokens", href: "/" },
@@ -25,9 +26,9 @@ export default function Navbar({}: {}) {
       {({ open }) => (
         <>
           <div className="max-w-7xl px-1 sm:px-2 lg:px-4 mb-5">
-            <div className="flex h-16 justify-between items-center">
+            <div className="flex h-16 justify-between">
               <div className="flex">
-                <div className="flex flex-shrink-0 items-center">
+                <div className="flex flex-shrink-0 items-center ">
                   <h1>
                     <a href="/">
                       <Image
@@ -60,7 +61,6 @@ export default function Navbar({}: {}) {
                 </div>
               </div>
               <div className="hidden sm:ml-6 sm:flex sm:items-center">
-                <ThemeSwitcher /> {/* Adding ThemeSwitcher here */}
                 <Menu as="div" className="relative ml-3">
                   <div></div>
                   <Transition
@@ -110,7 +110,6 @@ export default function Navbar({}: {}) {
                   {item.name}
                 </Disclosure.Button>
               ))}
-              <ThemeSwitcher /> {/* Adding ThemeSwitcher here */}
             </div>
             <div className="border-t border-gray-200 pt-4 pb-3"></div>
           </Disclosure.Panel>
